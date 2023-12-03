@@ -45,6 +45,8 @@ Assuming your dataset is loaded as data, separate features and the target variab
 X = data.drop(['Timestamp', 'CGPA'], axis=1)
 y = data['CGPA']
 
+![Alt Text](student_mental_health_API/preprocessing1.PNG)
+
 **Preprocessing:**
 
 Perform any necessary preprocessing on 'X'. For simplicity, we'll use pandas get_dummies for categorical encoding:
