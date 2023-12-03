@@ -140,6 +140,24 @@ This Dockerfile assumes that the FastAPI application is structured in a way that
 ![Alt Text](student_mental_health_API/api2PNG.PNG)
 ![Alt Text](student_mental_health_API/api3.PNG)
 
+# Package your model as a container using Docker
+Use the tiangolo/uvicorn-gunicorn-fastapi image as the base image
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9
+
+Copy the contents of the local 'app' directory into the '/app' directory in the container
+COPY ./app /app
+
+Install dependencies listed in the 'requirements.txt' file
+RUN pip install -r requirements.txt
+
+Expose port 80 to the outside world
+EXPOSE 80
+
+Set the command to run the UVicorn server with the specified host and port
+CMD ["uvicorn", "SMH:app", "--host", "0.0.0.0", "--port", "80"]
+
+![Alt Text](student_mental_health_API/docker.jpg)
+
 
 ## Flask Part 
 from flask import Flask, render_template, request
@@ -176,6 +194,7 @@ if __name__ == '__main__':
     
 and i get this : 
 
+![Alt Text](student_mental_health_API/interface.PNG)
 
 
 
