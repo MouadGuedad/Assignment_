@@ -59,23 +59,23 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 Train 5 machine learning models:
-# Model 1: Linear Regression
+* Model 1: Linear Regression
 linear_reg_model = LinearRegression()
 linear_reg_model.fit(X_train, y_train)
 
-# Model 2: Decision Tree Regression
+* Model 2: Decision Tree Regression
 decision_tree_model = DecisionTreeRegressor()
 decision_tree_model.fit(X_train, y_train)
 
-# Model 3: Random Forest Regression
+* Model 3: Random Forest Regression
 random_forest_model = RandomForestRegressor()
 random_forest_model.fit(X_train, y_train)
 
-# Model 4: Support Vector Regression
+* Model 4: Support Vector Regression
 svr_model = SVR()
 svr_model.fit(X_train, y_train)
 
-# Model 5: XGBoost Regression (replace Gradient Boosting)
+* Model 5: XGBoost Regression (replace Gradient Boosting)
 xgboost_model = XGBRegressor()
 xgboost_model.fit(X_train, y_train)
 
