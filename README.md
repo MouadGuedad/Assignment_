@@ -99,6 +99,12 @@ for model, name in zip(models, model_names):
     print(f"R-squared: {r2:.2f}")
     print(f"Explained Variance: {explained_var:.2f}")
 
+![Alt Text](student_mental_health_API/train_models.PNG)
+
+MlFlow  :
+![Alt Text](student_mental_health_API/mlflow.PNG)
+
+
   # Usage
 1. Start the FastAPI server:
 
@@ -130,6 +136,10 @@ CMD ["uvicorn", "SMH:app", "--host", "0.0.0.0", "--port", "80"]
 
 
 This Dockerfile assumes that the FastAPI application is structured in a way that the SMH(Student Mental health) module contains the app FastAPI instance.
+![Alt Text](student_mental_health_API/api.PNG)
+![Alt Text](student_mental_health_API/api2PNG.PNG)
+![Alt Text](student_mental_health_API/api3.PNG)
+
 
 ## Flask Part 
 from flask import Flask, render_template, request
