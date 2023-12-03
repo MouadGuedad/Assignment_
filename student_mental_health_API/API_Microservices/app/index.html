@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Student CGPA Prediction</title>
+</head>
+<body>
+    <div id="wrap" style="text-align: center; padding: 20px;">
+        <h1 style="font-size: 24px;">Predict Student CGPA</h1>
+
+        <section id="student" style="border: 1px solid #ccc; padding: 20px; display: inline-block;">
+            <div class="login" style="text-align: left;">
+                <form action="/predict" method="post">
+                    <table class="entryForm" style="margin: 0 auto;">
+                        <tr>
+                            <th style="padding-right: 10px;">Gender:</th>
+                            <td>
+                                <select name="gender" style="padding: 5px;" required="required">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="padding-right: 10px;">Age:</th>
+                            <td><input type="text" name="age" style="padding: 5px;" placeholder="Age" required="required" /></td>
+                        </tr>
+                        <tr>
+                            <th style="padding-right: 10px;">Course:</th>
+                            <td><input type="text" name="course" style="padding: 5px;" placeholder="Course" required="required" /></td>
+                        </tr>
+                        <tr>
+                            <th style="padding-right: 10px;">Year:</th>
+                            <td>
+                                <select name="year" style="padding: 5px;" required="required">
+                                    <option value="Year 1">Year 1</option>
+                                    <option value="Year 2">Year 2</option>
+                                    <option value="Year 3">Year 3</option>
+                                    <option value="Year 4">Year 4</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="padding-right: 10px;">CGPA:</th>
+                            <td>
+                                <select name="cgpa" style="padding: 5px;" required="required">
+                                    <option value="3.00 - 3.49">3.00 - 3.49</option>
+                                    <option value="3.50 - 4.00">3.50 - 4.00</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- Add more rows for other variables -->
+
+                    </table>
+                    <div class="btns" style="margin-top: 10px;">
+                        <button type="reset" style="padding: 5px 10px; background-color: #ccc;">Reset</button>
+                        <button type="submit" style="padding: 5px 10px; background-color: #007BFF; color: #fff;">Predict CGPA</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <br>
+        <br>
+        <div id="prediction_text" style="font-size: 18px;">{{prediction}}</div>
+    </div>
+</body>
+</html>
