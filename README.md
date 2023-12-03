@@ -46,6 +46,7 @@ X = data.drop(['Timestamp', 'CGPA'], axis=1)
 y = data['CGPA']
 
 ![Alt Text](student_mental_health_API/preprocessing1.PNG)
+![Alt Text](student_mental_health_API/preprocessing2.PNG)
 
 **Preprocessing:**
 
